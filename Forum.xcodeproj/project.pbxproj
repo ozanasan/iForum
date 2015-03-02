@@ -8,15 +8,18 @@
 
 /* Begin PBXBuildFile section */
 		E76E6E7E1A9BC7A1003177B9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E76E6E7D1A9BC7A1003177B9 /* AppDelegate.swift */; };
-		E76E6E851A9BC7A1003177B9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E76E6E831A9BC7A1003177B9 /* Main.storyboard */; };
 		E76E6E871A9BC7A1003177B9 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E76E6E861A9BC7A1003177B9 /* Images.xcassets */; };
 		E76E6E8A1A9BC7A1003177B9 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = E76E6E881A9BC7A1003177B9 /* LaunchScreen.xib */; };
 		E76E6E961A9BC7A1003177B9 /* ForumTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E76E6E951A9BC7A1003177B9 /* ForumTests.swift */; };
+		E78DEAC91AA340D000EDBA1B /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E78DEAC81AA340D000EDBA1B /* LoginViewController.swift */; };
+		E78DEACB1AA3480300EDBA1B /* TabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E78DEACA1AA3480300EDBA1B /* TabViewController.swift */; };
+		E7A495BB1AA3E74800296AB7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E7A495BA1AA3E74800296AB7 /* Main.storyboard */; };
 		E7A8B4C11AA1F3E1005EA85F /* AllGroupsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7A8B4C01AA1F3E1005EA85F /* AllGroupsViewController.swift */; };
 		E7A8B4C31AA1F483005EA85F /* MyGroupsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7A8B4C21AA1F483005EA85F /* MyGroupsViewController.swift */; };
 		E7A8B4C51AA1F4C6005EA85F /* GroupModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7A8B4C41AA1F4C6005EA85F /* GroupModel.swift */; };
 		E7A8B4CB1AA289FA005EA85F /* MemberModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7A8B4CA1AA289FA005EA85F /* MemberModel.swift */; };
 		E7A8B4D01AA2EAFC005EA85F /* Message.m in Sources */ = {isa = PBXBuildFile; fileRef = E7A8B4CF1AA2EAFC005EA85F /* Message.m */; };
+		E7A8B4D31AA30139005EA85F /* Member.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7A8B4D21AA30139005EA85F /* Member.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -33,12 +36,14 @@
 		E76E6E781A9BC7A1003177B9 /* Forum.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Forum.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E76E6E7C1A9BC7A1003177B9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E76E6E7D1A9BC7A1003177B9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		E76E6E841A9BC7A1003177B9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E76E6E861A9BC7A1003177B9 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		E76E6E891A9BC7A1003177B9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		E76E6E8F1A9BC7A1003177B9 /* ForumTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ForumTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E76E6E941A9BC7A1003177B9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E76E6E951A9BC7A1003177B9 /* ForumTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForumTests.swift; sourceTree = "<group>"; };
+		E78DEAC81AA340D000EDBA1B /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginViewController.swift; path = ../LoginViewController.swift; sourceTree = "<group>"; };
+		E78DEACA1AA3480300EDBA1B /* TabViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabViewController.swift; sourceTree = "<group>"; };
+		E7A495BA1AA3E74800296AB7 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		E7A8B4C01AA1F3E1005EA85F /* AllGroupsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AllGroupsViewController.swift; sourceTree = "<group>"; };
 		E7A8B4C21AA1F483005EA85F /* MyGroupsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MyGroupsViewController.swift; path = ../MyGroupsViewController.swift; sourceTree = "<group>"; };
 		E7A8B4C41AA1F4C6005EA85F /* GroupModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GroupModel.swift; sourceTree = "<group>"; };
@@ -46,6 +51,7 @@
 		E7A8B4CE1AA2EAFB005EA85F /* Forum-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Forum-Bridging-Header.h"; sourceTree = "<group>"; };
 		E7A8B4CF1AA2EAFC005EA85F /* Message.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Message.m; path = ../Message.m; sourceTree = "<group>"; };
 		E7A8B4D11AA2EC97005EA85F /* Message.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Message.h; sourceTree = "<group>"; };
+		E7A8B4D21AA30139005EA85F /* Member.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Member.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,11 +94,14 @@
 		E76E6E7A1A9BC7A1003177B9 /* Forum */ = {
 			isa = PBXGroup;
 			children = (
+				E78DEAC81AA340D000EDBA1B /* LoginViewController.swift */,
 				E7A8B4CF1AA2EAFC005EA85F /* Message.m */,
 				E7A8B4D11AA2EC97005EA85F /* Message.h */,
+				E7A8B4D21AA30139005EA85F /* Member.swift */,
 				E76E6E7D1A9BC7A1003177B9 /* AppDelegate.swift */,
 				E7A8B4CA1AA289FA005EA85F /* MemberModel.swift */,
-				E76E6E831A9BC7A1003177B9 /* Main.storyboard */,
+				E7A495BA1AA3E74800296AB7 /* Main.storyboard */,
+				E78DEACA1AA3480300EDBA1B /* TabViewController.swift */,
 				E7A8B4C41AA1F4C6005EA85F /* GroupModel.swift */,
 				E7A8B4C21AA1F483005EA85F /* MyGroupsViewController.swift */,
 				E7A8B4C01AA1F3E1005EA85F /* AllGroupsViewController.swift */,
@@ -208,7 +217,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E76E6E851A9BC7A1003177B9 /* Main.storyboard in Resources */,
+				E7A495BB1AA3E74800296AB7 /* Main.storyboard in Resources */,
 				E76E6E8A1A9BC7A1003177B9 /* LaunchScreen.xib in Resources */,
 				E76E6E871A9BC7A1003177B9 /* Images.xcassets in Resources */,
 			);
@@ -228,11 +237,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E78DEAC91AA340D000EDBA1B /* LoginViewController.swift in Sources */,
 				E7A8B4C31AA1F483005EA85F /* MyGroupsViewController.swift in Sources */,
 				E7A8B4D01AA2EAFC005EA85F /* Message.m in Sources */,
 				E7A8B4CB1AA289FA005EA85F /* MemberModel.swift in Sources */,
 				E7A8B4C51AA1F4C6005EA85F /* GroupModel.swift in Sources */,
 				E7A8B4C11AA1F3E1005EA85F /* AllGroupsViewController.swift in Sources */,
+				E78DEACB1AA3480300EDBA1B /* TabViewController.swift in Sources */,
+				E7A8B4D31AA30139005EA85F /* Member.swift in Sources */,
 				E76E6E7E1A9BC7A1003177B9 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -256,14 +268,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		E76E6E831A9BC7A1003177B9 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				E76E6E841A9BC7A1003177B9 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		E76E6E881A9BC7A1003177B9 /* LaunchScreen.xib */ = {
 			isa = PBXVariantGroup;
 			children = (

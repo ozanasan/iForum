@@ -7,6 +7,13 @@
 //
 
 #import "Message.h"
+#import "Forum-Swift.h"
+
+@interface Message()
+
+@property (weak, nonatomic) Member *owner;
+
+@end
 
 @implementation Message
 

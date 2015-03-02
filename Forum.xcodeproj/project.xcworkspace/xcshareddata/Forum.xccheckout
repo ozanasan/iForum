@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>EC92C566-C987-4262-9CDA-7A285828FF64</string>
+	<key>IDESourceControlProjectName</key>
+	<string>Forum</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>65FF3BFDEC3121A785DA7C584B8F4D941C2F54FD</key>
+		<string>https://github.com/ozanasan/iForum.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>Forum.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>65FF3BFDEC3121A785DA7C584B8F4D941C2F54FD</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/ozanasan/iForum.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>65FF3BFDEC3121A785DA7C584B8F4D941C2F54FD</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>65FF3BFDEC3121A785DA7C584B8F4D941C2F54FD</string>
+			<key>IDESourceControlWCCName</key>
+			<string>Forum</string>
+		</dict>
+	</array>
+</dict>
+</plist>
