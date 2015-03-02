@@ -10,8 +10,8 @@ import Foundation
 import UIKit
 
 class Group {
-    let creatorFirstName : String?
-    let creatorLastName : String?
+    var creatorFirstName : String?
+    var creatorLastName : String?
     var members : [String]?
     var groupName : String
     var groupPic : UIImage?

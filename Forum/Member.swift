@@ -11,7 +11,7 @@ import UIKit
 
 class Member : NSObject {
     
-    let userName :String?
+    var userName :String?
     let lastName : String?
     var groups : [Group]?
     let userPic : UIImage!

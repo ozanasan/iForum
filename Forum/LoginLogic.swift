@@ -18,12 +18,13 @@ func shouldLogin(name : String?, password : String?, sender : LoginViewControlle
         
     else if (name! == password!) && !name!.isEmpty {
         shouldLogin = true
+        successfullLogin(name!)
     }
-    
-    
     return shouldLogin
 }
 
-/*
-
-*/
+func successfullLogin(name : String) {
+    
+    let member : Member = Member.sharedInstance
+    member.userName = name
+}

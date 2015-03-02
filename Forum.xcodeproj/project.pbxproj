@@ -15,6 +15,7 @@
 		E78DEACB1AA3480300EDBA1B /* TabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E78DEACA1AA3480300EDBA1B /* TabViewController.swift */; };
 		E7A495BB1AA3E74800296AB7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E7A495BA1AA3E74800296AB7 /* Main.storyboard */; };
 		E7A495BD1AA3F43000296AB7 /* LoginLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7A495BC1AA3F43000296AB7 /* LoginLogic.swift */; };
+		E7A495BF1AA440F500296AB7 /* WebServiceImitation.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7A495BE1AA440F500296AB7 /* WebServiceImitation.swift */; };
 		E7A8B4C11AA1F3E1005EA85F /* AllGroupsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7A8B4C01AA1F3E1005EA85F /* AllGroupsViewController.swift */; };
 		E7A8B4C31AA1F483005EA85F /* MyGroupsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7A8B4C21AA1F483005EA85F /* MyGroupsViewController.swift */; };
 		E7A8B4C51AA1F4C6005EA85F /* GroupModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7A8B4C41AA1F4C6005EA85F /* GroupModel.swift */; };
@@ -46,6 +47,7 @@
 		E78DEACA1AA3480300EDBA1B /* TabViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabViewController.swift; sourceTree = "<group>"; };
 		E7A495BA1AA3E74800296AB7 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		E7A495BC1AA3F43000296AB7 /* LoginLogic.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginLogic.swift; sourceTree = "<group>"; };
+		E7A495BE1AA440F500296AB7 /* WebServiceImitation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebServiceImitation.swift; sourceTree = "<group>"; };
 		E7A8B4C01AA1F3E1005EA85F /* AllGroupsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AllGroupsViewController.swift; sourceTree = "<group>"; };
 		E7A8B4C21AA1F483005EA85F /* MyGroupsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MyGroupsViewController.swift; path = ../MyGroupsViewController.swift; sourceTree = "<group>"; };
 		E7A8B4C41AA1F4C6005EA85F /* GroupModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GroupModel.swift; sourceTree = "<group>"; };
@@ -99,6 +101,7 @@
 				E78DEAC81AA340D000EDBA1B /* LoginViewController.swift */,
 				E7A8B4CF1AA2EAFC005EA85F /* Message.m */,
 				E7A495BC1AA3F43000296AB7 /* LoginLogic.swift */,
+				E7A495BE1AA440F500296AB7 /* WebServiceImitation.swift */,
 				E7A8B4D11AA2EC97005EA85F /* Message.h */,
 				E7A8B4D21AA30139005EA85F /* Member.swift */,
 				E76E6E7D1A9BC7A1003177B9 /* AppDelegate.swift */,
@@ -243,6 +246,7 @@
 				E78DEAC91AA340D000EDBA1B /* LoginViewController.swift in Sources */,
 				E7A8B4C31AA1F483005EA85F /* MyGroupsViewController.swift in Sources */,
 				E7A8B4D01AA2EAFC005EA85F /* Message.m in Sources */,
+				E7A495BF1AA440F500296AB7 /* WebServiceImitation.swift in Sources */,
 				E7A8B4CB1AA289FA005EA85F /* MemberModel.swift in Sources */,
 				E7A495BD1AA3F43000296AB7 /* LoginLogic.swift in Sources */,
 				E7A8B4C51AA1F4C6005EA85F /* GroupModel.swift in Sources */,
