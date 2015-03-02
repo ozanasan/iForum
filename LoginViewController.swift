@@ -16,25 +16,18 @@ class LoginViewController: UIViewController {
     //login control inside should perform segue
     override func shouldPerformSegueWithIdentifier(identifier: String?, sender: AnyObject?) -> Bool {
         
-        var shouldPErform : Bool = false
-        
-        if identifier! == "loginToTab" {
-            let name : String = userName.text
-            let myword = password.text
-            
-            if name != myword {
-                var alert = UIAlertController(title: "LOGIN FAILED", message: "You can try again", preferredStyle: UIAlertControllerStyle.Alert)
+        switch(identifier!) {
+            case "loginToTab":
+                return shouldLogin(userName.text, password.text, self)
+            default:
                 
-                alert.addAction(UIAlertAction(title: "Okay", style: UIAlertActionStyle.Default, handler: nil))
-                
-                self.presentViewController(alert, animated: true, completion: nil)
-            }
-                
-            else if (name == myword) && !name.isEmpty {
-                shouldPErform = true
-            }
-            
+                return false
         }
-        return shouldPErform
+    }
+    
+    func presentOneActionAlarmWithTitle(alarmTitle : String, alarmMessage : String, alarmAction :String) {
+        var alert = UIAlertController(title: alarmTitle, message: alarmMessage, preferredStyle: UIAlertControllerStyle.Alert)
+        alert.addAction(UIAlertAction(title: alarmAction, style: UIAlertActionStyle.Default, handler: nil))
+        self.presentViewController(alert, animated: true, completion: nil)
     }
 }
