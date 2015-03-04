@@ -8,7 +8,7 @@
 
 import UIKit
 
-class MyGroupsViewController: UITableViewController {
+class MyGroupsViewController: UITableViewController, UITableViewDataSource {
     
     var groups : [Group]? = []
     let webService : WebService! = WebService()
@@ -35,6 +35,18 @@ class MyGroupsViewController: UITableViewController {
 
         return cell
     }
+    
+    @IBAction func cancelBackToMyGroups (segue: UIStoryboardSegue) {
+        
+    }
+    
+    @IBAction func saveGroup (segue : UIStoryboardSegue) {
+        
+        println ("saveGroup")
+        
+    }
+    
+    
     
 
     /*

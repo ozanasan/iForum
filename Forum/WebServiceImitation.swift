@@ -12,6 +12,8 @@ import Foundation
 
 class WebService {
     
+    var groups : [Group] = []
+    
     func getUserGroups() -> [Group]? {
         
         println("Hey.. I am the web service, and I know the name of the session user as \(Member.sharedInstance.userName), I hope this is true.")
@@ -31,12 +33,17 @@ class WebService {
         group3.creatorLastName = "Aydın"
         group3.groupName = "Fenerbahce"
         
-        var groups : [Group] = []
+        
         groups.append(group1)
         groups.append(group2)
         groups.append(group3)
         
         return groups
+    }
+    
+    func addGroups(newGroup : Group) {
+        
+        groups.append(newGroup)
     }
     
     
