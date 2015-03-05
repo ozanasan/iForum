@@ -18,6 +18,10 @@ class MyGroupsViewController: UITableViewController, UITableViewDataSource {
         
         self.groups = webService.getUserGroups()
     }
+    
+    override func viewWillAppear(animated: Bool) {
+        self.groups = webService.getUserGroups()
+    }
 
     // MARK: - Table view data source
 
@@ -43,6 +47,7 @@ class MyGroupsViewController: UITableViewController, UITableViewDataSource {
     @IBAction func saveGroup (segue : UIStoryboardSegue) {
         
         println ("saveGroup")
+        self.tableView.reloadData()
         
     }
     

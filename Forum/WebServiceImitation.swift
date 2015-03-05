@@ -9,43 +9,70 @@
 //This class is imitation of web service methods I might have used.
 
 import Foundation
+import CoreData
+import UIKit
 
 class WebService {
     
-    var groups : [Group] = []
+    
     
     func getUserGroups() -> [Group]? {
         
-        println("Hey.. I am the web service, and I know the name of the session user as \(Member.sharedInstance.userName), I hope this is true.")
+        var groups : [Group] = []
         
-        let group1 : Group = Group()
-        group1.creatorFirstName = "Mike"
-        group1.creatorLastName = "Heath"
-        group1.groupName = "Pink Floyd Concert"
+        let appDelegate = UIApplication.sharedApplication().delegate as AppDelegate
         
-        let group2 : Group = Group()
-        group2.creatorFirstName = "Tim"
-        group2.creatorLastName = "Brey"
-        group2.groupName = "Swift Programming Language"
+        let managedContext = appDelegate.managedObjectContext!
         
-        let group3 : Group = Group()
-        group3.creatorFirstName = "Mehmet"
-        group3.creatorLastName = "Aydın"
-        group3.groupName = "Fenerbahce"
+        //2
+        let fetchRequest = NSFetchRequest(entityName:"Group")
         
+        //3
+        var error: NSError?
         
-        groups.append(group1)
-        groups.append(group2)
-        groups.append(group3)
+        let fetchedResults =
+        managedContext.executeFetchRequest(fetchRequest,
+            error: &error) as [NSManagedObject]?
         
+        if let results = fetchedResults {
+            
+            for NsModel in results {
+                var group : Group = Group()
+                group.groupName = NsModel.valueForKey("groupName") as String
+                group.creatorFirstName = NsModel.valueForKey("groupCreator") as? String
+                groups.append(group)
+            }
+            
+        } else {
+            println("Could not fetch \(error), \(error!.userInfo)")
+        }
         return groups
     }
     
     func addGroups(newGroup : Group) {
         
-        groups.append(newGroup)
+        
+        
+        let appDelegate = UIApplication.sharedApplication().delegate as AppDelegate
+        
+        let managedContext = appDelegate.managedObjectContext!
+        
+        //2
+        let entity =  NSEntityDescription.entityForName("Group",
+            inManagedObjectContext:
+            managedContext)
+        
+        let group = NSManagedObject(entity: entity!,
+            insertIntoManagedObjectContext:managedContext)
+        
+        //3
+        group.setValue(newGroup.groupName, forKey: "groupName")
+        group.setValue(Member.sharedInstance.userName!, forKey : "groupCreator")
+        
+        //4
+        var error: NSError?
+        if !managedContext.save(&error) {
+            println("Could not save \(error), \(error?.userInfo)")
+        }
     }
-    
-    
-    
 }
