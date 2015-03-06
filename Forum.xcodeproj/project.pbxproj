@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		E7576A4D1AA6A1B200B7F51D /* AddNewGroupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7576A4C1AA6A1B200B7F51D /* AddNewGroupViewController.swift */; };
 		E7576A501AA6CB4500B7F51D /* Forum.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E7576A4E1AA6CB4500B7F51D /* Forum.xcdatamodeld */; };
+		E7576A831AA9BBAE00B7F51D /* MessageListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7576A821AA9BBAE00B7F51D /* MessageListViewController.swift */; };
 		E76E6E7E1A9BC7A1003177B9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E76E6E7D1A9BC7A1003177B9 /* AppDelegate.swift */; };
 		E76E6E871A9BC7A1003177B9 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E76E6E861A9BC7A1003177B9 /* Images.xcassets */; };
 		E76E6E8A1A9BC7A1003177B9 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = E76E6E881A9BC7A1003177B9 /* LaunchScreen.xib */; };
@@ -39,6 +40,7 @@
 /* Begin PBXFileReference section */
 		E7576A4C1AA6A1B200B7F51D /* AddNewGroupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddNewGroupViewController.swift; sourceTree = "<group>"; };
 		E7576A4F1AA6CB4500B7F51D /* Forum.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Forum.xcdatamodel; sourceTree = "<group>"; };
+		E7576A821AA9BBAE00B7F51D /* MessageListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageListViewController.swift; sourceTree = "<group>"; };
 		E76E6E781A9BC7A1003177B9 /* Forum.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Forum.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E76E6E7C1A9BC7A1003177B9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E76E6E7D1A9BC7A1003177B9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -112,6 +114,7 @@
 				E7576A4E1AA6CB4500B7F51D /* Forum.xcdatamodeld */,
 				E7A8B4CA1AA289FA005EA85F /* MemberModel.swift */,
 				E7A495BA1AA3E74800296AB7 /* Main.storyboard */,
+				E7576A821AA9BBAE00B7F51D /* MessageListViewController.swift */,
 				E7576A4C1AA6A1B200B7F51D /* AddNewGroupViewController.swift */,
 				E78DEACA1AA3480300EDBA1B /* TabViewController.swift */,
 				E7A8B4C41AA1F4C6005EA85F /* GroupModel.swift */,
@@ -249,6 +252,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E7576A831AA9BBAE00B7F51D /* MessageListViewController.swift in Sources */,
 				E7576A501AA6CB4500B7F51D /* Forum.xcdatamodeld in Sources */,
 				E78DEAC91AA340D000EDBA1B /* LoginViewController.swift in Sources */,
 				E7A8B4C31AA1F483005EA85F /* MyGroupsViewController.swift in Sources */,

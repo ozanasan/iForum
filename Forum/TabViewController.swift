@@ -12,10 +12,6 @@ class TabViewController: UITabBarController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-        let name : String = Member.sharedInstance.userName!
-        println("Tab controller is here for you... And username is \(name) ")
     }
 
     override func didReceiveMemoryWarning() {

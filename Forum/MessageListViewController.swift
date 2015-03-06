@@ -1,82 +1,52 @@
 //
-//  MyGroupsViewController.swift
+//  MessageListViewController.swift
 //  Forum
 //
-//  Created by Ozan Asan on 28/02/15.
+//  Created by Ozan Asan on 06/03/15.
 //  Copyright (c) 2015 OzanAsan. All rights reserved.
 //
 
 import UIKit
 
-let messageSegueIdentifier = "ShowMessages"
-
-class MyGroupsViewController: UITableViewController, UITableViewDataSource, UITableViewDelegate {
+class MessageListViewController: UITableViewController {
     
-    var groups : [Group]? = []
-    let webService : WebService! = WebService()
-    var selectedGroupName : String?
+    var GroupName : String?
 
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        // Uncomment the following line to preserve selection between presentations
+        // self.clearsSelectionOnViewWillAppear = false
+
+        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
+        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
         
-        self.tableView.allowsSelection = true
-        self.groups = webService.getUserGroups()
-        
+        self.navigationItem.title = "Messages In \(self.GroupName!)"
     }
-    
-    override func viewWillAppear(animated: Bool) {
-        self.groups = webService.getUserGroups()
+
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
     }
 
     // MARK: - Table view data source
 
+    
+
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return groups!.count
+        // #warning Incomplete method implementation.
+        // Return the number of rows in the section.
+        return 1
     }
 
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        
-        let cell = tableView.dequeueReusableCellWithIdentifier("groupCell", forIndexPath: indexPath) as UITableViewCell
+        let cell = tableView.dequeueReusableCellWithIdentifier("messageCell", forIndexPath: indexPath) as UITableViewCell
 
-        let tempGroup : Group = self.groups![indexPath.row]
-        
-        cell.textLabel!.font = UIFont(name: "Helvetica-Bold", size: 20.0)
-        
-        cell.textLabel!.text = tempGroup.groupName
-        cell.detailTextLabel!.text = "by " + tempGroup.creatorFirstName!
-        
+        cell.textLabel!.text = "The Message"
+
         return cell
     }
-    
-    /*
-    //this is what happens when a user taps on a cell
-    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        tableView.deselectRowAtIndexPath(indexPath, animated: true)
-    }
-    */
-    
-    @IBAction func cancelBackToMyGroups (segue: UIStoryboardSegue) {
-        
-    }
-    
-    @IBAction func saveGroup (segue : UIStoryboardSegue) {
-        
-        println ("saveGroup")
-        self.tableView.reloadData()
-        
-    }
-    
-    //we set necessary variables in the destination view controller
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        if segue.identifier == messageSegueIdentifier {
-            let dest = segue.destinationViewController as MessageListViewController
-            let path = self.tableView.indexPathForSelectedRow()!
-            dest.GroupName = self.groups![path.row].groupName
-        }
-    }
-    
-    
     
 
     /*
