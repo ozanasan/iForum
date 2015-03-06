@@ -34,10 +34,18 @@ class MyGroupsViewController: UITableViewController, UITableViewDataSource {
         let cell = tableView.dequeueReusableCellWithIdentifier("groupCell", forIndexPath: indexPath) as UITableViewCell
 
         let tempGroup : Group = self.groups![indexPath.row]
-        cell.textLabel?.text = tempGroup.groupName
-        cell.detailTextLabel?.text = tempGroup.creatorFirstName
-
+        
+        cell.textLabel!.font = UIFont(name: "Helvetica-Bold", size: 20.0)
+        
+        cell.textLabel!.text = tempGroup.groupName
+        cell.detailTextLabel!.text = "by " + tempGroup.creatorFirstName!
+        
         return cell
+    }
+    
+    //this is what happens when a user taps on a cell
+    override func tableView(tableView: UITableView, didDeselectRowAtIndexPath indexPath: NSIndexPath) {
+        println("selected: \(self.groups![indexPath.row].groupName)")
     }
     
     @IBAction func cancelBackToMyGroups (segue: UIStoryboardSegue) {

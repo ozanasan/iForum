@@ -20,8 +20,6 @@ class Group {
     
     init() {
         self.groupName = "Default"
-        
-        
     }
     
     func postMessage (newMessage: Message) {
