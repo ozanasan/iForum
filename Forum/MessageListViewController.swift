@@ -79,9 +79,8 @@ class MessageListViewController: UITableViewController {
             self.navigationItem.title = "No Messages In \(self.GroupName!)"
         }
         
-        //I had to add this to remove tab bar items in the detail screen. I probably made a mistake ot
-        //I believe that it should disappear already.
-        //self.tabBarController?.hidesBottomBarWhenPushed = true
+        
+        
         
         //self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"Cell"
         tableView.registerNib(UINib(nibName: "MesCell", bundle:nil), forCellReuseIdentifier: "messageCell")
@@ -112,21 +111,20 @@ class MessageListViewController: UITableViewController {
         return 30.0
     }
     
+    // Footer button
     override func tableView(tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
-        //let footerView = UIView(frame: CGRectMake(0, 300, 320, 20))
-        var sendMessage : UIButton = UIButton.buttonWithType(UIButtonType.System) as UIButton
-        sendMessage.setTitle("SAY SOMETHING", forState: UIControlState.Normal)
-        sendMessage.titleLabel?.font = UIFont(name: "Helvetica-Bold", size: 20.0)
-        sendMessage.setTitleColor(UIColor.whiteColor(), forState: UIControlState.Normal)
-        sendMessage.backgroundColor = UIColor.blackColor()
-        sendMessage.addTarget(self, action: "addMessage", forControlEvents: UIControlEvents.TouchUpInside)
-        //sendMessage.frame = CGRectMake(0, 0, 20, 20)
-        
-        
-        //footerView.backgroundColor = UIColor.redColor()
-        
-        //footerView.addSubview(sendMessage)
-        return sendMessage
+        return prepareButton()
+    }
+    
+    //This method creates the send message button in the footer.
+    private func prepareButton() -> UIButton? {
+        let button = UIButton.buttonWithType(UIButtonType.System) as UIButton
+        button.setTitle("SAY SOMETHING", forState: UIControlState.Normal)
+        button.titleLabel?.font = UIFont(name: "Helvetica-Bold", size: 20.0)
+        button.setTitleColor(UIColor.whiteColor(), forState: UIControlState.Normal)
+        button.backgroundColor = UIColor.blackColor()
+        button.addTarget(self, action: "addMessage", forControlEvents: UIControlEvents.TouchUpInside)
+        return button
     }
     
     func addMessage() {
