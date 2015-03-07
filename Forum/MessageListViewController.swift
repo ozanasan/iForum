@@ -40,6 +40,28 @@ class MessageListViewController: UITableViewController {
     
     var MessageList : [Message]?
     var GroupName : String?
+    
+    
+    override init() {
+        super.init(style: UITableViewStyle.Plain)
+        
+        //I had to add this to remove tab bar items in the detail screen. I probably made a mistake ot
+        //I believe that it should disappear already.
+        self.tabBarController?.hidesBottomBarWhenPushed = true
+    }
+    
+    //had to impelement this
+    required init(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        self.tabBarController?.hidesBottomBarWhenPushed = true
+    }
+    
+    //had to implement this.
+    override init(nibName nibNameOrNil: String!, bundle nibBundleOrNil: NSBundle!) {
+        super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
+        self.tabBarController?.hidesBottomBarWhenPushed = true
+    }
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -57,17 +79,15 @@ class MessageListViewController: UITableViewController {
             self.navigationItem.title = "No Messages In \(self.GroupName!)"
         }
         
+        //I had to add this to remove tab bar items in the detail screen. I probably made a mistake ot
+        //I believe that it should disappear already.
+        //self.tabBarController?.hidesBottomBarWhenPushed = true
+        
+        //self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"Cell"
+        tableView.registerNib(UINib(nibName: "MesCell", bundle:nil), forCellReuseIdentifier: "messageCell")
+        //self.tableView.registerClass(aClass: MesCell(), forHeaderFooterViewReuseIdentifier: "messageCell")
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
-    // MARK: - Table view data source
-
     
-
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete method implementation.
         // Return the number of rows in the section.
@@ -76,9 +96,14 @@ class MessageListViewController: UITableViewController {
 
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("messageCell", forIndexPath: indexPath) as UITableViewCell
+        let cell = tableView.dequeueReusableCellWithIdentifier("messageCell", forIndexPath: indexPath) as MesCell
+        
+        cell.picture.image = UIImage(named: "r2d2.png")
+        cell.body.text = "Deneme Bir Ki"
+        
+        //cell.body.text = "DENEME"
 
-        cell.textLabel!.text = "The Message kwejhkjefhkje kdsjfhjsdkf ksdjfhsdjkhfkdsf skcfjhdskjfhksdjf sdkfjhskdfjhskjdf sdkfjhskdjfhksjdf sdkjfhdkjfhjdksf ksdjfhsdkjhskdjf sdkfjhsdkjfhdksjf dsfkjhsdkfhkjsdf kjhsdkfsdhfksdj sdkfjhskdhfjksdf sdkfjhdskjfsdkf sdkfjhsdjkfhsdkjfd sdkjfhsjkdfhsdk sdkfjsdnsldf sdlfjpweghf flsdfnwef sldkflaknf lkfsdjfwpşkefn akdfpwefkwlknçasnfk"
+        //cell.picture.image = UIImage(named: "r2d2.png")
 
         return cell
     }

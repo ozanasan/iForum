@@ -274,12 +274,12 @@
         <scene sceneID="VLl-Gk-Zlc">
             <objects>
                 <tableViewController id="Xr9-Al-n7C" customClass="MessageListViewController" customModule="Forum" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="Vf1-rf-Fic">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="249" sectionHeaderHeight="22" sectionFooterHeight="22" id="Vf1-rf-Fic">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="messageCell" id="qQQ-zP-W5M">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="249" id="qQQ-zP-W5M" customClass="MesCell" customModule="Forum">
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="qQQ-zP-W5M" id="3Mw-8J-0h2">
                                     <autoresizingMask key="autoresizingMask"/>
@@ -294,7 +294,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hsa-7o-qEw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3680" y="-1025"/>
+            <point key="canvasLocation" x="3292" y="-1169"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="D0l-qa-y6K">

@@ -19,7 +19,7 @@ class MyGroupsViewController: UITableViewController, UITableViewDataSource, UITa
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.tableView.allowsSelection = true
+        //self.tableView.allowsSelection = true
         self.groups = webService.getUserGroups()
         
     }
@@ -73,6 +73,7 @@ class MyGroupsViewController: UITableViewController, UITableViewDataSource, UITa
             let dest = segue.destinationViewController as MessageListViewController
             let path = self.tableView.indexPathForSelectedRow()!
             dest.GroupName = self.groups![path.row].groupName
+            dest.hidesBottomBarWhenPushed = true
         }
     }
     
