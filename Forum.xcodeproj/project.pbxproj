@@ -41,6 +41,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		E345EFAE1AAAD3F400E831FC /* Mike's Feedback.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = "Mike's Feedback.md"; sourceTree = "<group>"; };
 		E7576A4C1AA6A1B200B7F51D /* AddNewGroupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddNewGroupViewController.swift; sourceTree = "<group>"; };
 		E7576A4F1AA6CB4500B7F51D /* Forum.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Forum.xcdatamodel; sourceTree = "<group>"; };
 		E7576A821AA9BBAE00B7F51D /* MessageListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageListViewController.swift; sourceTree = "<group>"; };
@@ -111,6 +112,7 @@
 			isa = PBXGroup;
 			children = (
 				E78DEAC81AA340D000EDBA1B /* LoginViewController.swift */,
+				E345EFAE1AAAD3F400E831FC /* Mike's Feedback.md */,
 				E7A8B4CF1AA2EAFC005EA85F /* Message.m */,
 				E7A8B4D11AA2EC97005EA85F /* Message.h */,
 				E7A495BC1AA3F43000296AB7 /* LoginLogic.swift */,
