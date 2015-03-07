@@ -13,6 +13,7 @@
 
 @property (copy) NSString *messageBody;
 @property (copy) NSString *hede;
+@property (copy) NSDate *messageDate;
 
 @end
 

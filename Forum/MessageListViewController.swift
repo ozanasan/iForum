@@ -10,6 +10,7 @@ import UIKit
 
 class MessageListViewController: UITableViewController {
     
+    var MessageList : [Message]?
     var GroupName : String?
 
     override func viewDidLoad() {
@@ -20,8 +21,14 @@ class MessageListViewController: UITableViewController {
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+        if let count = MessageList {
+            self.navigationItem.title = "Messages In \(self.GroupName!)"
+        }
         
-        self.navigationItem.title = "Messages In \(self.GroupName!)"
+        else {
+            self.navigationItem.title = "No Messages In \(self.GroupName!)"
+        }
+        
     }
 
     override func didReceiveMemoryWarning() {

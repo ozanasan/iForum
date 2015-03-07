@@ -11,14 +11,14 @@
 
 @interface Message()
 
-@property (weak, nonatomic) Member *owner;
+@property (weak, nonatomic) Member *sender;
 
 @end
 
 @implementation Message
 
--(NSString* )denemeMethod {
-    return self.messageBody;
+-(Member* )getOwner {
+    return self.sender;
 }
 
 @end

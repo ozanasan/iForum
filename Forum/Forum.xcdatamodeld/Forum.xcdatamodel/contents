@@ -4,7 +4,9 @@
         <attribute name="groupCreator" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="groupName" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
+    <entity name="Message" syncable="YES"/>
     <elements>
         <element name="Group" positionX="-63" positionY="-18" width="128" height="75"/>
+        <element name="Message" positionX="-63" positionY="0" width="128" height="45"/>
     </elements>
 </model>

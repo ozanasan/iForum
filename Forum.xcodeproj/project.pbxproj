@@ -106,9 +106,9 @@
 			children = (
 				E78DEAC81AA340D000EDBA1B /* LoginViewController.swift */,
 				E7A8B4CF1AA2EAFC005EA85F /* Message.m */,
+				E7A8B4D11AA2EC97005EA85F /* Message.h */,
 				E7A495BC1AA3F43000296AB7 /* LoginLogic.swift */,
 				E7A495BE1AA440F500296AB7 /* WebServiceImitation.swift */,
-				E7A8B4D11AA2EC97005EA85F /* Message.h */,
 				E7A8B4D21AA30139005EA85F /* Member.swift */,
 				E76E6E7D1A9BC7A1003177B9 /* AppDelegate.swift */,
 				E7576A4E1AA6CB4500B7F51D /* Forum.xcdatamodeld */,
