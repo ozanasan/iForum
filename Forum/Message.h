@@ -12,7 +12,7 @@
 @interface Message : NSObject
 
 @property (copy) NSString *messageBody;
-@property (copy) NSString *hede;
+@property (copy) NSString *groupIn;
 @property (copy) NSDate *messageDate;
 
 @end

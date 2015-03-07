@@ -29,7 +29,7 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OyI-I4-q3f">
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" restorationIdentifier="loginButton" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OyI-I4-q3f">
                                 <rect key="frame" x="16" y="272" width="568" height="30"/>
                                 <color key="backgroundColor" red="0.92036863258910806" green="1" blue="0.91353093908576144" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="LOGIN">
