@@ -4,7 +4,13 @@
         <attribute name="groupCreator" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="groupName" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
+    <entity name="Message" syncable="YES">
+        <attribute name="body" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="date" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="sender" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
     <elements>
-        <element name="Group" positionX="-344" positionY="81" width="128" height="73"/>
+        <element name="Group" positionX="-344" positionY="81" width="128" height="75"/>
+        <element name="Message" positionX="-342" positionY="99" width="128" height="90"/>
     </elements>
 </model>
