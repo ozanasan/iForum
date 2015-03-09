@@ -19,18 +19,19 @@ class MessageListViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        tableView.registerNib(UINib(nibName: "MesCell", bundle:nil), forCellReuseIdentifier: "messageCell")
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        MessageList = WebService().getMessages(GroupName!)
         
         if let count = MessageList {
             self.navigationItem.title = "Messages In \(self.GroupName!)"
         }
-        
+            
         else {
             self.navigationItem.title = "No Messages In \(self.GroupName!)"
         }
-        
-        tableView.registerNib(UINib(nibName: "MesCell", bundle:nil), forCellReuseIdentifier: "messageCell")
-        
-        MessageList = WebService().getMessages(GroupName!)
     }
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

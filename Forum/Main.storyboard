@@ -145,6 +145,7 @@
                                 </state>
                                 <connections>
                                     <action selector="sendMessage" destination="yvt-i1-wtM" eventType="touchUpInside" id="sev-55-q4q"/>
+                                    <segue destination="igs-Ca-XuF" kind="unwind" unwindAction="messageSent:" id="STS-Sx-Bet"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Please type your message in:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QU6-3E-aaf">
@@ -182,6 +183,7 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zKv-kX-2XJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="igs-Ca-XuF" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="4329" y="-1139"/>
         </scene>
