@@ -8,6 +8,7 @@
 
 import UIKit
 
+//constants
 let sendMessageSegue = "sendMessageSegue"
 let cellHeight : CGFloat = 30.0
 
@@ -39,8 +40,6 @@ class MessageListViewController: UITableViewController {
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("messageCell", forIndexPath: indexPath) as MesCell
-        
-        
         let message = MessageList![indexPath.row]
         
         cell.body.text = message.body
@@ -73,9 +72,12 @@ class MessageListViewController: UITableViewController {
     func addMessage() {
         println("Button is tapped")
         sendMessageScreen()
-        
     }
     
+    //Unwind Segue Method(s):
+    @IBAction func messageSent(segue : UIStoryboardSegue) {}
+    
+    //Segue methods:
     func sendMessageScreen() {
         performSegueWithIdentifier(sendMessageSegue, sender: self)
     }

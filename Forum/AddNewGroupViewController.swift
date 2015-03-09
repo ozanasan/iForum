@@ -14,8 +14,6 @@ class AddNewGroupViewController: UIViewController {
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "saveGroup" {
-            println ("Prepare for segue")
-            
             if GroupName.text.isEmpty {
                 var alert = UIAlertController(title: "Save Action Fails", message: "Name field is empty!", preferredStyle: UIAlertControllerStyle.Alert)
                 alert.addAction(UIAlertAction(title: "Okay", style: UIAlertActionStyle.Default, handler: nil))
