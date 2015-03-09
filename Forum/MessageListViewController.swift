@@ -9,40 +9,16 @@
 import UIKit
 
 let sendMessageSegue = "sendMessageSegue"
+let cellHeight : CGFloat = 30.0
 
-class MessageListViewController: UITableViewController, UIPopoverControllerDelegate {
+class MessageListViewController: UITableViewController {
     
     var MessageList : [Message]?
     var GroupName : String?
     
-    override init() {
-        super.init(style: UITableViewStyle.Plain)
-        
-        //I had to add this to remove tab bar items in the detail screen. I probably made a mistake ot
-        //I believe that it should disappear already.
-        self.tabBarController?.hidesBottomBarWhenPushed = true
-    }
-    
-    //had to impelement this
-    required init(coder aDecoder: NSCoder) {
-        super.init(coder: aDecoder)
-        self.tabBarController?.hidesBottomBarWhenPushed = true
-    }
-    
-    //had to implement this.
-    override init(nibName nibNameOrNil: String!, bundle nibBundleOrNil: NSBundle!) {
-        super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
-        self.tabBarController?.hidesBottomBarWhenPushed = true
-    }
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+        
         if let count = MessageList {
             self.navigationItem.title = "Messages In \(self.GroupName!)"
         }
@@ -51,27 +27,31 @@ class MessageListViewController: UITableViewController, UIPopoverControllerDeleg
             self.navigationItem.title = "No Messages In \(self.GroupName!)"
         }
         
-        //self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"Cell"
         tableView.registerNib(UINib(nibName: "MesCell", bundle:nil), forCellReuseIdentifier: "messageCell")
-        //self.tableView.registerClass(aClass: MesCell(), forHeaderFooterViewReuseIdentifier: "messageCell")
+        
+        MessageList = WebService().getMessages(GroupName!)
     }
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete method implementation.
-        // Return the number of rows in the section.
-        return 3
+        return MessageList!.count
     }
 
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("messageCell", forIndexPath: indexPath) as MesCell
+        
+        
+        let message = MessageList![indexPath.row]
+        
+        cell.body.text = message.body
+        cell.name.text = message.senderName
         cell.picture.image = UIImage(named: "r2d2.png")
-        cell.body.text = "Deneme Bir Ki"
+        
         return cell
     }
     
     override func tableView(tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
-        return 30.0
+        return cellHeight
     }
     
     // Footer button
@@ -98,5 +78,12 @@ class MessageListViewController: UITableViewController, UIPopoverControllerDeleg
     
     func sendMessageScreen() {
         performSegueWithIdentifier(sendMessageSegue, sender: self)
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if(segue.identifier == sendMessageSegue) {
+            let destination = segue.destinationViewController as SendMessageViewController
+            destination.currentGroupName = GroupName!
+        }
     }
 }

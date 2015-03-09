@@ -8,8 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		E7576A4D1AA6A1B200B7F51D /* AddNewGroupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7576A4C1AA6A1B200B7F51D /* AddNewGroupViewController.swift */; };
-		E7576A501AA6CB4500B7F51D /* Forum.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E7576A4E1AA6CB4500B7F51D /* Forum.xcdatamodeld */; };
 		E7576A831AA9BBAE00B7F51D /* MessageListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7576A821AA9BBAE00B7F51D /* MessageListViewController.swift */; };
+		E76B21CC1AAD946D00125B8E /* Forum2.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E76B21CA1AAD946D00125B8E /* Forum2.xcdatamodeld */; };
 		E76E6E7E1A9BC7A1003177B9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E76E6E7D1A9BC7A1003177B9 /* AppDelegate.swift */; };
 		E76E6E871A9BC7A1003177B9 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E76E6E861A9BC7A1003177B9 /* Images.xcassets */; };
 		E76E6E8A1A9BC7A1003177B9 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = E76E6E881A9BC7A1003177B9 /* LaunchScreen.xib */; };
@@ -44,8 +44,8 @@
 /* Begin PBXFileReference section */
 		E345EFAE1AAAD3F400E831FC /* Mike's Feedback.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = "Mike's Feedback.md"; sourceTree = "<group>"; };
 		E7576A4C1AA6A1B200B7F51D /* AddNewGroupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddNewGroupViewController.swift; sourceTree = "<group>"; };
-		E7576A4F1AA6CB4500B7F51D /* Forum.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Forum.xcdatamodel; sourceTree = "<group>"; };
 		E7576A821AA9BBAE00B7F51D /* MessageListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageListViewController.swift; sourceTree = "<group>"; };
+		E76B21CB1AAD946D00125B8E /* Forum2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Forum2.xcdatamodel; sourceTree = "<group>"; };
 		E76E6E781A9BC7A1003177B9 /* Forum.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Forum.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E76E6E7C1A9BC7A1003177B9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E76E6E7D1A9BC7A1003177B9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -113,6 +113,7 @@
 		E76E6E7A1A9BC7A1003177B9 /* Forum */ = {
 			isa = PBXGroup;
 			children = (
+				E76B21CA1AAD946D00125B8E /* Forum2.xcdatamodeld */,
 				E78DEAC81AA340D000EDBA1B /* LoginViewController.swift */,
 				E345EFAE1AAAD3F400E831FC /* Mike's Feedback.md */,
 				E7A8B4CF1AA2EAFC005EA85F /* Message.m */,
@@ -121,7 +122,6 @@
 				E7A495BE1AA440F500296AB7 /* WebServiceImitation.swift */,
 				E7A8B4D21AA30139005EA85F /* Member.swift */,
 				E76E6E7D1A9BC7A1003177B9 /* AppDelegate.swift */,
-				E7576A4E1AA6CB4500B7F51D /* Forum.xcdatamodeld */,
 				E7A8B4CA1AA289FA005EA85F /* MemberModel.swift */,
 				E7A495BA1AA3E74800296AB7 /* Main.storyboard */,
 				E7E5E5351AAB2AE70001CCA9 /* SendMessageViewController.swift */,
@@ -269,12 +269,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				E7576A831AA9BBAE00B7F51D /* MessageListViewController.swift in Sources */,
-				E7576A501AA6CB4500B7F51D /* Forum.xcdatamodeld in Sources */,
 				E7E5E5311AAAF2C90001CCA9 /* MesCell.swift in Sources */,
 				E78DEAC91AA340D000EDBA1B /* LoginViewController.swift in Sources */,
 				E7A8B4C31AA1F483005EA85F /* MyGroupsViewController.swift in Sources */,
 				E7A8B4D01AA2EAFC005EA85F /* Message.m in Sources */,
 				E7A495BF1AA440F500296AB7 /* WebServiceImitation.swift in Sources */,
+				E76B21CC1AAD946D00125B8E /* Forum2.xcdatamodeld in Sources */,
 				E7A8B4CB1AA289FA005EA85F /* MemberModel.swift in Sources */,
 				E7E5E5361AAB2AE70001CCA9 /* SendMessageViewController.swift in Sources */,
 				E7A495BD1AA3F43000296AB7 /* LoginLogic.swift in Sources */,
@@ -490,14 +490,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		E7576A4E1AA6CB4500B7F51D /* Forum.xcdatamodeld */ = {
+		E76B21CA1AAD946D00125B8E /* Forum2.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				E7576A4F1AA6CB4500B7F51D /* Forum.xcdatamodel */,
+				E76B21CB1AAD946D00125B8E /* Forum2.xcdatamodel */,
 			);
-			currentVersion = E7576A4F1AA6CB4500B7F51D /* Forum.xcdatamodel */;
-			path = Forum.xcdatamodeld;
-			sourceTree = "<group>";
+			currentVersion = E76B21CB1AAD946D00125B8E /* Forum2.xcdatamodel */;
+			path = Forum2.xcdatamodeld;
+			sourceTree = SOURCE_ROOT;
 			versionGroupType = wrapper.xcdatamodel;
 		};
 /* End XCVersionGroup section */

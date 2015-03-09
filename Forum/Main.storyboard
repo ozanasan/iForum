@@ -143,6 +143,9 @@
                                         </fragment>
                                     </attributedString>
                                 </state>
+                                <connections>
+                                    <action selector="sendMessage" destination="yvt-i1-wtM" eventType="touchUpInside" id="sev-55-q4q"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="You message:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QU6-3E-aaf">
                                 <rect key="frame" x="16" y="98" width="568" height="51"/>
@@ -173,6 +176,9 @@
                         </constraints>
                     </view>
                     <value key="contentSizeForViewInPopover" type="size" width="500" height="150"/>
+                    <connections>
+                        <outlet property="messageBody" destination="Qfr-XX-uOM" id="Uyk-zF-zNR"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zKv-kX-2XJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

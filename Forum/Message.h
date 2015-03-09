@@ -11,9 +11,10 @@
 
 @interface Message : NSObject
 
-@property (copy) NSString *messageBody;
-@property (copy) NSString *groupIn;
-@property (copy) NSDate *messageDate;
+@property (copy) NSString *body;
+@property (copy) NSString *group;
+@property (copy) NSDate *date;
+@property (copy) NSString *senderName;
 
 @end
 
