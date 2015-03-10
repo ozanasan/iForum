@@ -127,8 +127,12 @@
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Qfr-XX-uOM">
                                 <rect key="frame" x="16" y="157" width="568" height="317"/>
                                 <color key="backgroundColor" red="0.90196079015731812" green="0.90196079015731812" blue="0.90196079015731812" alpha="1" colorSpace="calibratedRGB"/>
+                                <gestureRecognizers/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="bc4-L8-2eV" appends="YES" id="uue-VS-0Kx"/>
+                                </connections>
                             </textView>
                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Mdq-YA-1Xf">
                                 <rect key="frame" x="16" y="482" width="568" height="61"/>
@@ -184,6 +188,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zKv-kX-2XJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="igs-Ca-XuF" userLabel="Exit" sceneMemberID="exit"/>
+                <swipeGestureRecognizer direction="right" id="bc4-L8-2eV"/>
             </objects>
             <point key="canvasLocation" x="4329" y="-1139"/>
         </scene>

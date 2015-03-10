@@ -10,9 +10,20 @@ import UIKit
 
 class SendMessageViewController: UIViewController {
     
+    @IBOutlet weak var messageBody: UITextView!
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        let swipe = UISwipeGestureRecognizer(target: self, action: "handleSwipe:")
+        messageBody.addGestureRecognizer(swipe)
+    }
+    
     var currentGroupName : String?
     
-    @IBOutlet weak var messageBody: UITextView!
+    func handleSwipe(sender:UISwipeGestureRecognizer) {
+        sendMessage()
+    }
     
     @IBAction func sendMessage() {
         WebService().sendMessage(curentMessage())
@@ -26,5 +37,6 @@ class SendMessageViewController: UIViewController {
         
         return message
     }
-
+    
+    
 }
