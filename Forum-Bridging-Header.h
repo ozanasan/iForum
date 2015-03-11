@@ -3,3 +3,4 @@
 //
 
 #import "Message.h"
+#import <UIKit/UIGestureRecognizerSubclass.h>
