@@ -124,16 +124,22 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Qfr-XX-uOM">
-                                <rect key="frame" x="16" y="157" width="568" height="317"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Qfr-XX-uOM">
+                                <rect key="frame" x="16" y="151" width="568" height="317"/>
                                 <color key="backgroundColor" red="0.90196079015731812" green="0.90196079015731812" blue="0.90196079015731812" alpha="1" colorSpace="calibratedRGB"/>
                                 <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="317" id="rSA-1T-Rjn"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Mdq-YA-1Xf">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Mdq-YA-1Xf">
                                 <rect key="frame" x="16" y="482" width="568" height="61"/>
                                 <color key="backgroundColor" red="0.054901964962482452" green="0.039215687662363052" blue="0.13333334028720856" alpha="1" colorSpace="deviceRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="61" id="Kbx-xC-ogE"/>
+                                </constraints>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <state key="normal">
                                     <attributedString key="attributedTitle">
@@ -146,10 +152,9 @@
                                 </state>
                                 <connections>
                                     <action selector="sendMessage" destination="yvt-i1-wtM" eventType="touchUpInside" id="sev-55-q4q"/>
-                                    <segue destination="igs-Ca-XuF" kind="unwind" unwindAction="messageSent:" id="STS-Sx-Bet"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Please type your message in:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QU6-3E-aaf">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please type your message in:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QU6-3E-aaf">
                                 <rect key="frame" x="16" y="98" width="568" height="51"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -162,31 +167,28 @@
                             <accessibilityTraits key="traits" none="YES" keyboardKey="YES"/>
                         </accessibility>
                         <constraints>
-                            <constraint firstItem="Mdq-YA-1Xf" firstAttribute="leading" secondItem="rkM-Z8-fpz" secondAttribute="leadingMargin" id="6Hv-qH-kb0"/>
-                            <constraint firstItem="Qfr-XX-uOM" firstAttribute="leading" secondItem="rkM-Z8-fpz" secondAttribute="leadingMargin" id="DH5-Tw-CQb"/>
-                            <constraint firstItem="QU6-3E-aaf" firstAttribute="trailing" secondItem="rkM-Z8-fpz" secondAttribute="trailingMargin" id="KA2-rY-oAd"/>
-                            <constraint firstItem="Qfr-XX-uOM" firstAttribute="trailing" secondItem="rkM-Z8-fpz" secondAttribute="trailingMargin" id="VBw-8H-Q0j"/>
-                            <constraint firstItem="Mdq-YA-1Xf" firstAttribute="top" secondItem="Qfr-XX-uOM" secondAttribute="bottom" constant="14" id="Wvt-RP-gCz"/>
-                            <constraint firstItem="Qfr-XX-uOM" firstAttribute="top" secondItem="QU6-3E-aaf" secondAttribute="bottom" constant="-2" id="bzZ-xS-8MR"/>
-                            <constraint firstItem="Mdq-YA-1Xf" firstAttribute="leading" secondItem="rkM-Z8-fpz" secondAttribute="leadingMargin" id="cnl-rN-3lX"/>
-                            <constraint firstItem="Mdq-YA-1Xf" firstAttribute="trailing" secondItem="rkM-Z8-fpz" secondAttribute="trailingMargin" id="dnj-8e-FYa"/>
-                            <constraint firstItem="Mdq-YA-1Xf" firstAttribute="top" secondItem="Qfr-XX-uOM" secondAttribute="bottom" constant="14" id="l9g-Bb-wtx"/>
-                            <constraint firstItem="QU6-3E-aaf" firstAttribute="leading" secondItem="rkM-Z8-fpz" secondAttribute="leadingMargin" id="mZD-Bd-sQE"/>
-                            <constraint firstItem="QU6-3E-aaf" firstAttribute="top" secondItem="Qiw-f4-NBS" secondAttribute="bottom" id="sSt-T3-n5G"/>
-                            <constraint firstItem="Qfr-XX-uOM" firstAttribute="trailing" secondItem="rkM-Z8-fpz" secondAttribute="trailingMargin" id="w3t-Wt-fqG"/>
-                            <constraint firstItem="Qfr-XX-uOM" firstAttribute="leading" secondItem="rkM-Z8-fpz" secondAttribute="leadingMargin" id="ztj-Ll-Zzd"/>
-                            <constraint firstItem="Qfr-XX-uOM" firstAttribute="top" secondItem="QU6-3E-aaf" secondAttribute="bottom" constant="-2" id="ztv-mU-QH0"/>
+                            <constraint firstItem="QU6-3E-aaf" firstAttribute="leading" secondItem="rkM-Z8-fpz" secondAttribute="leadingMargin" id="7tU-8C-W8P"/>
+                            <constraint firstItem="QU6-3E-aaf" firstAttribute="trailing" secondItem="Qfr-XX-uOM" secondAttribute="trailing" id="H11-Eu-ZcP"/>
+                            <constraint firstItem="Mdq-YA-1Xf" firstAttribute="trailing" secondItem="Qfr-XX-uOM" secondAttribute="trailing" id="Hmr-kW-YJf"/>
+                            <constraint firstItem="QU6-3E-aaf" firstAttribute="top" secondItem="Qiw-f4-NBS" secondAttribute="bottom" constant="34" id="J72-cW-ahZ"/>
+                            <constraint firstItem="QU6-3E-aaf" firstAttribute="trailing" secondItem="rkM-Z8-fpz" secondAttribute="trailingMargin" id="QMP-55-phR"/>
+                            <constraint firstItem="Mdq-YA-1Xf" firstAttribute="leading" secondItem="Qfr-XX-uOM" secondAttribute="leading" id="Ysa-JJ-E9J"/>
+                            <constraint firstItem="Qfr-XX-uOM" firstAttribute="top" secondItem="QU6-3E-aaf" secondAttribute="bottom" constant="2" id="bBf-RL-kx2"/>
+                            <constraint firstItem="FqE-LL-p7Y" firstAttribute="top" secondItem="Mdq-YA-1Xf" secondAttribute="bottom" constant="8" symbolic="YES" id="f8m-Tn-vcS"/>
+                            <constraint firstItem="Mdq-YA-1Xf" firstAttribute="top" secondItem="Qfr-XX-uOM" secondAttribute="bottom" constant="14" id="nTk-9I-cT4"/>
+                            <constraint firstItem="QU6-3E-aaf" firstAttribute="leading" secondItem="Qfr-XX-uOM" secondAttribute="leading" id="zlf-87-fT2"/>
                         </constraints>
                     </view>
                     <value key="contentSizeForViewInPopover" type="size" width="500" height="150"/>
                     <connections>
                         <outlet property="messageBody" destination="Qfr-XX-uOM" id="Uyk-zF-zNR"/>
+                        <segue destination="igs-Ca-XuF" kind="unwind" identifier="unwindMessageList" unwindAction="messageSent:" id="Vvb-Qa-p6U"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zKv-kX-2XJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="igs-Ca-XuF" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="4329" y="-1139"/>
+            <point key="canvasLocation" x="4267" y="-1161"/>
         </scene>
         <!--My Groups-->
         <scene sceneID="eyv-Om-6yH">

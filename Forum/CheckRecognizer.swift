@@ -13,12 +13,12 @@ import UIKit
 class CheckRecognizer : UIGestureRecognizer {
     
     var rightdown = false
-    var leftup = false
+    var rightup = false
     
     override func reset() {
         super.reset()
         self.rightdown = false
-        self.leftup = false
+        self.rightup = false
     }
     
     override func touchesMoved(touches: NSSet!, withEvent event: UIEvent!) {
@@ -27,23 +27,28 @@ class CheckRecognizer : UIGestureRecognizer {
         let previousPoint = theTouch.previousLocationInView(self.view)
         
         var movedRightDownThisTime : Bool  = checkDirection(previousPoint, end : movedPoint, checker : {(($1.x - $0.x > 0) && ($1.y - $0.y > 0))} )
-        var movedLeftUpThisTime : Bool = checkDirection(previousPoint, end : movedPoint, checker : {(($1.x - $0.x > 0) && ($0.y - $1.y > 0))} )
+        var movedRigthUpThisTime : Bool = checkDirection(previousPoint, end : movedPoint, checker : {(($1.x - $0.x > 0) && ($0.y - $1.y > 0))} )
         
         //I am adding this to be able to flag a .Failed case better. 
         //I used to check movedRightDownThisTime and movedLeftUpThisTime and if they both are false, I made it a .Failed
         //But apperantly, sometimes when you make small moves on screen, one of the coordinates stays same which leads both movedRightDownThisTime and movedLeftUpThisTime to become false at this small moment, so I am checking this condition here to exclude it.
         var anyCoordinateEqual : Bool = checkDirection(previousPoint, end: movedPoint, checker: {($1.x == $0.x) || ($1.y == $0.y)})
         
-        switch (movedRightDownThisTime, movedLeftUpThisTime, self.leftup, self.rightdown, anyCoordinateEqual) {
+        switch (movedRightDownThisTime, movedRigthUpThisTime, self.rightup, self.rightdown, anyCoordinateEqual) {
+            //if touch moved rigth down this time, and has never gone right up, everthing is fine.
             case (true, _, false, _, _):
                 self.rightdown = true
+            //moved right down this time, but moved right up before that. This is a fail.
             case(true, _, true, _, _):
                 self.state = UIGestureRecognizerState.Failed
+            //moved rigth up this time, and moved right down in the past. This is a checker!
             case(_, true, _, true, _):
-                self.leftup = true
+                self.rightup = true
                 self.state = UIGestureRecognizerState.Ended
+            //moved rigth up this time bu never did move rigth down in the past. This is a fail.
             case(_, true, _, false, _):
                 self.state = UIGestureRecognizerState.Failed
+            //if touch did not move in either rigthup nor rightdown, and anyCoordinateEqual is false, this is s fail. 
             case(false, false, _, _, false):
                 self.state = UIGestureRecognizerState.Failed
             default:

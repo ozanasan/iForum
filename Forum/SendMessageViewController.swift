@@ -8,6 +8,7 @@
 
 import UIKit
 
+//In this view controller you can add a message into the group you came from.
 class SendMessageViewController: UIViewController {
     
     @IBOutlet weak var messageBody: UITextView!
@@ -16,16 +17,14 @@ class SendMessageViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let myRecgonizer = CheckRecognizer(target: self, action: "deneme")
+        let myRecgonizer = CheckRecognizer(target: self, action: "sendMessage")
         messageBody.addGestureRecognizer(myRecgonizer)
     }
     
+    //unwindMessageList unwindSegue is created in storyboard, and its method is in MessageListControllerunwindMessageList
     @IBAction func sendMessage() {
         WebService().sendMessage(curentMessage())
-    }
-    
-    func deneme() {
-        println("OHA, OLDU.")
+        performSegueWithIdentifier("unwindMessageList", sender: self)
     }
     
     func curentMessage() -> Message {

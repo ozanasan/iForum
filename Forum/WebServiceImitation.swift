@@ -78,7 +78,6 @@ class WebService {
         if !managedContext.save(&error) {
             println("Could not save \(error), \(error?.userInfo)")
         }
-        
     }
     
     func getMessages(groupName: String) -> [Message]? {

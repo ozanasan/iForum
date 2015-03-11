@@ -38,7 +38,6 @@ class MessageListViewController: UITableViewController {
         return MessageList!.count
     }
 
-    
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("messageCell", forIndexPath: indexPath) as MesCell
         let message = MessageList![indexPath.row]
@@ -54,7 +53,7 @@ class MessageListViewController: UITableViewController {
         return cellHeight
     }
     
-    // Footer button
+    //Adding footer button programatically
     override func tableView(tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
         return prepareButton()
     }
@@ -70,8 +69,8 @@ class MessageListViewController: UITableViewController {
         return button
     }
     
+    //Footer button action - selector
     func addMessage() {
-        println("Button is tapped")
         sendMessageScreen()
     }
     
