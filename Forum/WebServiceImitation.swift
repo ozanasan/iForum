@@ -108,6 +108,10 @@ class WebService {
             println("Could not fetch \(error), \(error!.userInfo)")
         }
         return messages
-        
     }
+    
+    func getUserJoinedGroups() -> [Group]? {
+        return currentUser.groups
+    }
+    
 }

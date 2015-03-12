@@ -4,6 +4,9 @@
         <attribute name="creator" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
+    <entity name="Member" syncable="YES">
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
     <entity name="Message" syncable="YES">
         <attribute name="body" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="date" optional="YES" attributeType="Date" syncable="YES"/>
@@ -11,7 +14,8 @@
         <attribute name="sender" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Group" positionX="-63" positionY="-18" width="128" height="30"/>
-        <element name="Message" positionX="-54" positionY="9" width="128" height="105"/>
+        <element name="Message" positionX="-63" positionY="-18" width="128" height="103"/>
+        <element name="Group" positionX="-54" positionY="18" width="128" height="75"/>
+        <element name="Member" positionX="-36" positionY="36" width="128" height="58"/>
     </elements>
 </model>

@@ -21,10 +21,10 @@
 		E7A495BF1AA440F500296AB7 /* WebServiceImitation.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7A495BE1AA440F500296AB7 /* WebServiceImitation.swift */; };
 		E7A8B4C11AA1F3E1005EA85F /* AllGroupsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7A8B4C01AA1F3E1005EA85F /* AllGroupsViewController.swift */; };
 		E7A8B4C31AA1F483005EA85F /* MyGroupsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7A8B4C21AA1F483005EA85F /* MyGroupsViewController.swift */; };
-		E7A8B4C51AA1F4C6005EA85F /* GroupModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7A8B4C41AA1F4C6005EA85F /* GroupModel.swift */; };
-		E7A8B4CB1AA289FA005EA85F /* MemberModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7A8B4CA1AA289FA005EA85F /* MemberModel.swift */; };
+		E7A8B4C51AA1F4C6005EA85F /* Group.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7A8B4C41AA1F4C6005EA85F /* Group.swift */; };
 		E7A8B4D01AA2EAFC005EA85F /* Message.m in Sources */ = {isa = PBXBuildFile; fileRef = E7A8B4CF1AA2EAFC005EA85F /* Message.m */; };
 		E7A8B4D31AA30139005EA85F /* Member.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7A8B4D21AA30139005EA85F /* Member.swift */; };
+		E7CEC8741AB1B6EA00E0B552 /* GroupDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7CEC8731AB1B6EA00E0B552 /* GroupDetailViewController.swift */; };
 		E7E082431AAFF5E4003B281F /* CheckRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7E082421AAFF5E4003B281F /* CheckRecognizer.swift */; };
 		E7E5E5311AAAF2C90001CCA9 /* MesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7E5E52F1AAAF2C90001CCA9 /* MesCell.swift */; };
 		E7E5E5321AAAF2C90001CCA9 /* MesCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E7E5E5301AAAF2C90001CCA9 /* MesCell.xib */; };
@@ -61,12 +61,12 @@
 		E7A495BE1AA440F500296AB7 /* WebServiceImitation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebServiceImitation.swift; sourceTree = "<group>"; };
 		E7A8B4C01AA1F3E1005EA85F /* AllGroupsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AllGroupsViewController.swift; sourceTree = "<group>"; };
 		E7A8B4C21AA1F483005EA85F /* MyGroupsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MyGroupsViewController.swift; path = ../MyGroupsViewController.swift; sourceTree = "<group>"; };
-		E7A8B4C41AA1F4C6005EA85F /* GroupModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GroupModel.swift; sourceTree = "<group>"; };
-		E7A8B4CA1AA289FA005EA85F /* MemberModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MemberModel.swift; sourceTree = "<group>"; };
+		E7A8B4C41AA1F4C6005EA85F /* Group.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Group.swift; sourceTree = "<group>"; };
 		E7A8B4CE1AA2EAFB005EA85F /* Forum-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Forum-Bridging-Header.h"; sourceTree = "<group>"; };
 		E7A8B4CF1AA2EAFC005EA85F /* Message.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Message.m; path = ../Message.m; sourceTree = "<group>"; };
 		E7A8B4D11AA2EC97005EA85F /* Message.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Message.h; sourceTree = "<group>"; };
 		E7A8B4D21AA30139005EA85F /* Member.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Member.swift; sourceTree = "<group>"; };
+		E7CEC8731AB1B6EA00E0B552 /* GroupDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GroupDetailViewController.swift; sourceTree = "<group>"; };
 		E7E082421AAFF5E4003B281F /* CheckRecognizer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CheckRecognizer.swift; sourceTree = "<group>"; };
 		E7E5E52F1AAAF2C90001CCA9 /* MesCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MesCell.swift; sourceTree = "<group>"; };
 		E7E5E5301AAAF2C90001CCA9 /* MesCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MesCell.xib; sourceTree = "<group>"; };
@@ -122,7 +122,6 @@
 				E7A495BE1AA440F500296AB7 /* WebServiceImitation.swift */,
 				E7A8B4D21AA30139005EA85F /* Member.swift */,
 				E76E6E7D1A9BC7A1003177B9 /* AppDelegate.swift */,
-				E7A8B4CA1AA289FA005EA85F /* MemberModel.swift */,
 				E7A495BA1AA3E74800296AB7 /* Main.storyboard */,
 				E7E5E5351AAB2AE70001CCA9 /* SendMessageViewController.swift */,
 				E7576A821AA9BBAE00B7F51D /* MessageListViewController.swift */,
@@ -130,8 +129,9 @@
 				E7E5E5301AAAF2C90001CCA9 /* MesCell.xib */,
 				E7576A4C1AA6A1B200B7F51D /* AddNewGroupViewController.swift */,
 				E78DEACA1AA3480300EDBA1B /* TabViewController.swift */,
-				E7A8B4C41AA1F4C6005EA85F /* GroupModel.swift */,
+				E7A8B4C41AA1F4C6005EA85F /* Group.swift */,
 				E7A8B4C21AA1F483005EA85F /* MyGroupsViewController.swift */,
+				E7CEC8731AB1B6EA00E0B552 /* GroupDetailViewController.swift */,
 				E7A8B4C01AA1F3E1005EA85F /* AllGroupsViewController.swift */,
 				E7E082421AAFF5E4003B281F /* CheckRecognizer.swift */,
 				E76E6E861A9BC7A1003177B9 /* Images.xcassets */,
@@ -271,16 +271,16 @@
 			files = (
 				E7576A831AA9BBAE00B7F51D /* MessageListViewController.swift in Sources */,
 				E7E5E5311AAAF2C90001CCA9 /* MesCell.swift in Sources */,
+				E7CEC8741AB1B6EA00E0B552 /* GroupDetailViewController.swift in Sources */,
 				E78DEAC91AA340D000EDBA1B /* LoginViewController.swift in Sources */,
 				E7A8B4C31AA1F483005EA85F /* MyGroupsViewController.swift in Sources */,
 				E7A8B4D01AA2EAFC005EA85F /* Message.m in Sources */,
 				E7A495BF1AA440F500296AB7 /* WebServiceImitation.swift in Sources */,
 				E76B21CC1AAD946D00125B8E /* Forum2.xcdatamodeld in Sources */,
 				E7E082431AAFF5E4003B281F /* CheckRecognizer.swift in Sources */,
-				E7A8B4CB1AA289FA005EA85F /* MemberModel.swift in Sources */,
 				E7E5E5361AAB2AE70001CCA9 /* SendMessageViewController.swift in Sources */,
 				E7A495BD1AA3F43000296AB7 /* LoginLogic.swift in Sources */,
-				E7A8B4C51AA1F4C6005EA85F /* GroupModel.swift in Sources */,
+				E7A8B4C51AA1F4C6005EA85F /* Group.swift in Sources */,
 				E7A8B4C11AA1F3E1005EA85F /* AllGroupsViewController.swift in Sources */,
 				E78DEACB1AA3480300EDBA1B /* TabViewController.swift in Sources */,
 				E7576A4D1AA6A1B200B7F51D /* AddNewGroupViewController.swift in Sources */,

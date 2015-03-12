@@ -48,7 +48,7 @@ class CheckRecognizer : UIGestureRecognizer {
             //moved rigth up this time bu never did move rigth down in the past. This is a fail.
             case(_, true, _, false, _):
                 self.state = UIGestureRecognizerState.Failed
-            //if touch did not move in either rigthup nor rightdown, and anyCoordinateEqual is false, this is s fail. 
+            //if touch did not move in either rigthup nor rightdown direction, and anyCoordinateEqual is false, this is s fail. 
             case(false, false, _, _, false):
                 self.state = UIGestureRecognizerState.Failed
             default:

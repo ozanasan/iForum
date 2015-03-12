@@ -8,14 +8,18 @@
 
 import UIKit
 
-//constants
-let messageSegueIdentifier = "ShowMessages"
-
 class MyGroupsViewController: UITableViewController, UITableViewDataSource, UITableViewDelegate {
+    
+    //constants
+    enum MyGroupsSegues : String {
+        case messageSegueIdentifier = "ShowMessages"
+        case accessorySegueIdentifier = "accessoryFromMy"
+    }
     
     var groups : [Group]? = []
     let webService : WebService! = WebService()
     var selectedGroupName : String?
+    var accessoryRow : Int?
     
     override func viewWillAppear(animated: Bool) {
         self.groups = webService.getUserGroups()
@@ -39,6 +43,10 @@ class MyGroupsViewController: UITableViewController, UITableViewDataSource, UITa
         return cell
     }
     
+    override func tableView(tableView: UITableView, accessoryButtonTappedForRowWithIndexPath indexPath: NSIndexPath) {
+        self.accessoryRow = indexPath.row
+    }
+    
     //Unwind Segue Methods:
     @IBAction func cancelBackToMyGroups (segue: UIStoryboardSegue) {}
     
@@ -46,11 +54,34 @@ class MyGroupsViewController: UITableViewController, UITableViewDataSource, UITa
     
     //We set necessary variables in the destination view controller
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if let identifier = segue.identifier {
+            switch identifier {
+                case MyGroupsSegues.messageSegueIdentifier.rawValue:
+                    let dest = segue.destinationViewController as MessageListViewController
+                    let path = self.tableView.indexPathForSelectedRow()!
+                    dest.GroupName = self.groups![path.row].groupName
+                    dest.hidesBottomBarWhenPushed = true
+                
+                case MyGroupsSegues.accessorySegueIdentifier.rawValue:
+                    let dest = segue.destinationViewController as GroupDetailViewController
+                    let selectedCell = sender as UITableViewCell
+                    let row = self.tableView.indexPathForCell(selectedCell)!.row
+                    dest.groupName = self.groups![row].groupName
+                    dest.hidesBottomBarWhenPushed = true
+                default:
+                    break
+            }
+        }
+        
+        
+        
+        /*
         if segue.identifier == messageSegueIdentifier {
             let dest = segue.destinationViewController as MessageListViewController
             let path = self.tableView.indexPathForSelectedRow()!
             dest.GroupName = self.groups![path.row].groupName
             dest.hidesBottomBarWhenPushed = true
         }
+        */
     }
 }

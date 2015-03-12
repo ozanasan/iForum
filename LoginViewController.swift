@@ -20,7 +20,6 @@ class LoginViewController: UIViewController {
             case "loginToTab":
                 return shouldLogin(userName.text, password.text, self)
             default:
-                
                 return false
         }
     }

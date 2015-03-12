@@ -26,11 +26,11 @@ class MessageListViewController: UITableViewController {
         MessageList = WebService().getMessages(GroupName!)
         
         if let count = MessageList {
-            self.navigationItem.title = "Messages In \(self.GroupName!)"
+            self.navigationItem.title = "Messages"
         }
             
         else {
-            self.navigationItem.title = "No Messages In \(self.GroupName!)"
+            self.navigationItem.title = "No Messages"
         }
     }
     
