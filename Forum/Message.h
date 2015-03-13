@@ -8,7 +8,6 @@
 
 #import <Foundation/Foundation.h>
 
-
 @interface Message : NSObject
 
 @property (copy) NSString *body;

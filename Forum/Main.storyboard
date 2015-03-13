@@ -47,7 +47,7 @@
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Igu-eg-CF2">
                                 <rect key="frame" x="120" y="211" width="464" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Welcome to our world!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="si2-fb-fm3">
                                 <rect key="frame" x="16" y="28" width="568" height="93"/>
@@ -188,7 +188,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zKv-kX-2XJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="igs-Ca-XuF" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="4267" y="-1161"/>
+            <point key="canvasLocation" x="4395" y="-953"/>
         </scene>
         <!--My Groups-->
         <scene sceneID="eyv-Om-6yH">
@@ -386,7 +386,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sLZ-Pq-TjB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3637" y="339"/>
+            <point key="canvasLocation" x="3679" y="467"/>
         </scene>
         <!--My Groups-->
         <scene sceneID="rNi-Ud-1X4">
@@ -434,7 +434,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hsa-7o-qEw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3625" y="-1139"/>
+            <point key="canvasLocation" x="3673" y="-931"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="D0l-qa-y6K">
