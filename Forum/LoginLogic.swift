@@ -16,7 +16,7 @@ func shouldLogin(name : String?, password : String?, sender : LoginViewControlle
         
     }
         
-    else if (name! == password!) && !name!.isEmpty {
+    else if (name! == password!) {
         shouldLogin = true
         successfullLogin(name!)
     }

@@ -18,7 +18,12 @@ class LoginViewController: UIViewController {
         
         switch(identifier!) {
             case "loginToTab":
-                return shouldLogin(userName.text, password.text, self)
+                if(!userName.text.isEmpty) {
+                    return shouldLogin(userName.text, password.text, self)
+                }
+                else {
+                    return false
+                }
             default:
                 return false
         }
